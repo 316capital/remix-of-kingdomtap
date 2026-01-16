@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Navy Blue & Gold Color System */
+    --background: 220 30% 97%;
+    --foreground: 222 47% 11%;
+    
+    --card: 220 25% 96%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 220 25% 96%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Rich Gold Accent */
+    --primary: 43 96% 50%;
+    --primary-foreground: 222 47% 11%;
+    
+    /* Deep Navy Blue */
+    --secondary: 222 47% 15%;
+    --secondary-foreground: 45 100% 95%;
+    
+    /* Soft Gold Tint */
+    --accent: 45 40% 93%;
+    --accent-foreground: 222 47% 11%;
+    
+    --muted: 220 20% 94%;
+    --muted-foreground: 222 30% 40%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 30% 97%;
+    
+    --border: 220 20% 88%;
+    --input: 220 20% 94%;
+    --ring: 43 96% 50%;
+    
+    --radius: 1rem;
+    
+    /* Navy & Gold Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(43 96% 50%) 0%, hsl(45 95% 55%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(45 95% 55%) 0%, hsl(40 90% 52%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(222 47% 11%) 0%, hsl(222 45% 15%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(222 47% 13% / 0.95) 0%, hsl(222 45% 16% / 0.95) 100%);
+    --gradient-mesh: radial-gradient(at 20% 30%, hsl(43 96% 50% / 0.15) 0px, transparent 50%), radial-gradient(at 80% 70%, hsl(45 95% 55% / 0.12) 0px, transparent 50%);
+    
+    /* Premium Shadows */
+    --shadow-primary: 0 20px 60px -15px hsl(43 96% 50% / 0.5);
+    --shadow-glow: 0 0 80px -20px hsl(43 96% 50% / 0.4);
+    --shadow-card: 0 10px 40px -10px hsl(222 47% 8% / 0.6);
+  }
+
+  .dark {
+    /* Deep Navy Background */
+    --background: 222 47% 11%;
+    --foreground: 45 100% 97%;
+    
+    --card: 222 45% 14%;
+    --card-foreground: 45 100% 97%;
+    
+    --popover: 222 45% 14%;
+    --popover-foreground: 45 100% 97%;
+    
+    /* Vibrant Gold */
+    --primary: 43 96% 50%;
+    --primary-foreground: 222 47% 11%;
+    
+    /* Navy Accent */
+    --secondary: 222 40% 20%;
+    --secondary-foreground: 45 100% 97%;
+    
+    --accent: 222 40% 18%;
+    --accent-foreground: 45 100% 97%;
+    
+    --muted: 222 35% 18%;
+    --muted-foreground: 220 20% 65%;
+    
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 45 100% 97%;
+    
+    --border: 222 35% 25%;
+    --input: 222 40% 18%;
+    --ring: 43 96% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
